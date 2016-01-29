@@ -1,0 +1,19 @@
+elasticsearch:
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+  environment:
+    CLUSTER_NAME: es-local-mwa
+elasticsearchnode:
+  environment:
+    CLUSTER_NAME: es-local-mwa
+logstash:
+  ports:
+    - "5000:5000"
+  command: --config /etc/logstash/conf.d/ -w 1
+  volumes: 
+   - /workspace/logs/:/logs/:ro
+kibana:
+  ports:
+    - "80:80"
+

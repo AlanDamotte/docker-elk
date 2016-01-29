@@ -1,0 +1,7 @@
+#
+# Author : Alan Damotte <alan.damotte@worldline.com>
+#
+output {
+	elasticsearch { host => "elasticsearch" }
+	stdout { codec => rubydebug }
+}

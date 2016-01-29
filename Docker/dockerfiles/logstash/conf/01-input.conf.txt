@@ -1,0 +1,12 @@
+#
+# Author : Alan Damotte <alan.damotte@worldline.com>
+#
+input {
+	file {
+		type => ""
+		path => ""		
+		start_position => "beginning"
+		sincedb_path => "/dev/null"
+		
+	}
+}
